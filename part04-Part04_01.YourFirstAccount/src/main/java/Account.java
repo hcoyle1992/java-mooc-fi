@@ -20,7 +20,7 @@ public class Account {
         this.balance = this.balance - amount;
     }
 
-    public double saldo() {
+    public double balance() {
         return this.balance;
     }
 

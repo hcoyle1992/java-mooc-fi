@@ -8,7 +8,7 @@ public class YourFirstAccount {
         System.out.println(artosAccount);
 
         artosAccount.deposit(20);
-        System.out.println("The balance of Arto's account is now: " + artosAccount.saldo());
+        System.out.println("The balance of Arto's account is now: " + artosAccount.balance());
 
         System.out.println("End state");
         System.out.println(artosAccount);
