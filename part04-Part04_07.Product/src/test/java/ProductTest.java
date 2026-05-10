@@ -9,7 +9,9 @@ import org.junit.Before;
 import static org.junit.Assert.*;
 
 @Points("04-07")
-public class ProductTest {
+public class
+
+ProductTest {
 
     Reflex.ClassRef<Object> klass;
     String className = "Product";
