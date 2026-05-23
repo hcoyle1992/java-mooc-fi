@@ -12,8 +12,18 @@ public class GuestListFromAFile {
         String file = scanner.nextLine();
 
         ArrayList<String> list = new ArrayList<>();
-        // implement reading the file here.
-        System.out.println("");
+
+        // while has another line, add its contents to the ararylist
+        try (Scanner fileScanner = new Scanner(Paths.get(file))) {
+            while (fileScanner.hasNextLine()) {
+                list.add(fileScanner.nextLine());
+
+            }
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+
+        System.out.println();
 
         System.out.println("Enter names, an empty line quits.");
         while (true) {
@@ -32,3 +42,5 @@ public class GuestListFromAFile {
         System.out.println("Thank you!");
     }
 }
+
+
