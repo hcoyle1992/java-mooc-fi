@@ -52,6 +52,8 @@ public class SportStatistics {
     private static void printMatchesPlayedByTeam(String teamName, List<MatchStats> matches) {
         int gamesPlayed = 0;
         int gamesWon = 0;
+        int gamesDrew = 0;
+        int gamesLost = 0;
 
         for (MatchStats m : matches) {
 
@@ -66,15 +68,18 @@ public class SportStatistics {
 
             if (m.isWinner(teamName)) {
                 gamesWon++;
+            } else if (m.isDraw()) {
+                gamesDrew++;
+            } else {
+                gamesLost++;
             }
         }
 
         System.out.println("Games: " + gamesPlayed);
         System.out.println("Wins: " + gamesWon);
-        System.out.println("Losses: " + (gamesPlayed - gamesWon)); //not accounting for draws yet
+        System.out.println("Losses: " + gamesLost);
+        System.out.println("Draws: " + gamesDrew);
     }
-
-
 
 
     private static void printTotalNumberOfMatches(List<MatchStats> matches) {
